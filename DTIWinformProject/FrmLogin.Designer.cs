@@ -32,13 +32,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.tbUsername = new System.Windows.Forms.TextBox();
+            this.tbPassword = new System.Windows.Forms.TextBox();
+            this.rdStudent = new System.Windows.Forms.RadioButton();
+            this.rdTeacher = new System.Windows.Forms.RadioButton();
+            this.btCancel = new System.Windows.Forms.Button();
+            this.btExit = new System.Windows.Forms.Button();
+            this.btLogin = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -74,87 +74,88 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "รหัสผ่าน :";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // textBox1
+            // tbUsername
             // 
-            this.textBox1.Location = new System.Drawing.Point(526, 249);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(380, 20);
-            this.textBox1.TabIndex = 3;
+            this.tbUsername.Location = new System.Drawing.Point(526, 249);
+            this.tbUsername.Name = "tbUsername";
+            this.tbUsername.Size = new System.Drawing.Size(380, 20);
+            this.tbUsername.TabIndex = 3;
             // 
-            // textBox2
+            // tbPassword
             // 
-            this.textBox2.Location = new System.Drawing.Point(526, 303);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(380, 20);
-            this.textBox2.TabIndex = 4;
+            this.tbPassword.Location = new System.Drawing.Point(526, 303);
+            this.tbPassword.Name = "tbPassword";
+            this.tbPassword.PasswordChar = '*';
+            this.tbPassword.Size = new System.Drawing.Size(380, 20);
+            this.tbPassword.TabIndex = 4;
             // 
-            // radioButton1
+            // rdStudent
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Checked = true;
-            this.radioButton1.Location = new System.Drawing.Point(624, 363);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(62, 17);
-            this.radioButton1.TabIndex = 6;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Student";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            this.rdStudent.AutoSize = true;
+            this.rdStudent.Checked = true;
+            this.rdStudent.Location = new System.Drawing.Point(624, 363);
+            this.rdStudent.Name = "rdStudent";
+            this.rdStudent.Size = new System.Drawing.Size(62, 17);
+            this.rdStudent.TabIndex = 6;
+            this.rdStudent.TabStop = true;
+            this.rdStudent.Text = "Student";
+            this.rdStudent.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // rdTeacher
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(746, 363);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(65, 17);
-            this.radioButton2.TabIndex = 7;
-            this.radioButton2.Text = "Teacher";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rdTeacher.AutoSize = true;
+            this.rdTeacher.Location = new System.Drawing.Point(746, 363);
+            this.rdTeacher.Name = "rdTeacher";
+            this.rdTeacher.Size = new System.Drawing.Size(65, 17);
+            this.rdTeacher.TabIndex = 7;
+            this.rdTeacher.Text = "Teacher";
+            this.rdTeacher.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btCancel
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.Image = global::DTIWinformProject.Properties.Resources.cancel;
-            this.button3.Location = new System.Drawing.Point(746, 426);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(160, 50);
-            this.button3.TabIndex = 10;
-            this.button3.Text = "ยกเลิก";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button3.UseVisualStyleBackColor = false;
+            this.btCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btCancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btCancel.Image = global::DTIWinformProject.Properties.Resources.cancel;
+            this.btCancel.Location = new System.Drawing.Point(746, 426);
+            this.btCancel.Name = "btCancel";
+            this.btCancel.Size = new System.Drawing.Size(160, 50);
+            this.btCancel.TabIndex = 10;
+            this.btCancel.Text = "ยกเลิก";
+            this.btCancel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btCancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btCancel.UseVisualStyleBackColor = false;
+            this.btCancel.Click += new System.EventHandler(this.btCancel_Click);
             // 
-            // button2
+            // btExit
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Image = global::DTIWinformProject.Properties.Resources.exit3;
-            this.button2.Location = new System.Drawing.Point(526, 501);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(380, 50);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "ออกจากระบบ";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button2.UseVisualStyleBackColor = false;
+            this.btExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btExit.Image = global::DTIWinformProject.Properties.Resources.exit3;
+            this.btExit.Location = new System.Drawing.Point(526, 501);
+            this.btExit.Name = "btExit";
+            this.btExit.Size = new System.Drawing.Size(380, 50);
+            this.btExit.TabIndex = 9;
+            this.btExit.Text = "ออกจากระบบ";
+            this.btExit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btExit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btExit.UseVisualStyleBackColor = false;
+            this.btExit.Click += new System.EventHandler(this.btExit_Click);
             // 
-            // button1
+            // btLogin
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Image = global::DTIWinformProject.Properties.Resources.start;
-            this.button1.Location = new System.Drawing.Point(526, 426);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(160, 50);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "เข้าใช้งานระบบ";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btLogin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btLogin.Image = global::DTIWinformProject.Properties.Resources.start;
+            this.btLogin.Location = new System.Drawing.Point(526, 426);
+            this.btLogin.Name = "btLogin";
+            this.btLogin.Size = new System.Drawing.Size(160, 50);
+            this.btLogin.TabIndex = 8;
+            this.btLogin.Text = "เข้าใช้งานระบบ";
+            this.btLogin.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btLogin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btLogin.UseVisualStyleBackColor = false;
+            this.btLogin.Click += new System.EventHandler(this.btLogin_Click);
             // 
             // pictureBox1
             // 
@@ -172,14 +173,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1064, 681);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.btCancel);
+            this.Controls.Add(this.btExit);
+            this.Controls.Add(this.btLogin);
+            this.Controls.Add(this.rdTeacher);
+            this.Controls.Add(this.rdStudent);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbPassword);
+            this.Controls.Add(this.tbUsername);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -189,7 +190,6 @@
             this.Name = "FrmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login - DTI Soft V.1.0";
-            this.Load += new System.EventHandler(this.FrmLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -199,14 +199,14 @@
         #endregion
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tbUsername;
+        private System.Windows.Forms.TextBox tbPassword;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.RadioButton rdStudent;
+        private System.Windows.Forms.RadioButton rdTeacher;
+        private System.Windows.Forms.Button btLogin;
+        private System.Windows.Forms.Button btExit;
+        private System.Windows.Forms.Button btCancel;
         private System.Windows.Forms.Label label1;
     }
 }
