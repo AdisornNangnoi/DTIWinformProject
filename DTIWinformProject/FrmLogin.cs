@@ -60,6 +60,15 @@ namespace DTIWinformProject
                 }
                 else
                 {
+                    shareData.loginName = tbUsername.Text.Trim();
+                    if (rdStudent.Checked == true)
+                    {
+                        shareData.loginType = "student";
+                    }
+                    else
+                    {
+                        shareData.loginType = "teacher";
+                    }
                     FrmMainMenu frmMainMenu = new FrmMainMenu();
                     frmMainMenu.Show();
                     Hide();
