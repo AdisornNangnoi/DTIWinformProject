@@ -30,38 +30,38 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCalculator));
-            this.label4 = new System.Windows.Forms.Label();
+            this.lbResult = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbNum1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.tbNum2 = new System.Windows.Forms.TextBox();
+            this.btPlus = new System.Windows.Forms.Button();
+            this.btMinus = new System.Windows.Forms.Button();
+            this.btMultiply = new System.Windows.Forms.Button();
+            this.btDivide = new System.Windows.Forms.Button();
+            this.btPow = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tslbUsername = new System.Windows.Forms.ToolStripLabel();
             this.tslbDateTime = new System.Windows.Forms.ToolStripLabel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbbDecimal = new System.Windows.Forms.ComboBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label4
+            // lbResult
             // 
-            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Red;
-            this.label4.Location = new System.Drawing.Point(243, 510);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(579, 104);
-            this.label4.TabIndex = 23;
-            this.label4.Text = "?????";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbResult.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lbResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbResult.ForeColor = System.Drawing.Color.Red;
+            this.lbResult.Location = new System.Drawing.Point(243, 510);
+            this.lbResult.Name = "lbResult";
+            this.lbResult.Size = new System.Drawing.Size(579, 104);
+            this.lbResult.TabIndex = 23;
+            this.lbResult.Text = "?????";
+            this.lbResult.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // button1
             // 
@@ -78,12 +78,13 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox1
+            // tbNum1
             // 
-            this.textBox1.Location = new System.Drawing.Point(326, 218);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(408, 20);
-            this.textBox1.TabIndex = 19;
+            this.tbNum1.Location = new System.Drawing.Point(326, 218);
+            this.tbNum1.Name = "tbNum1";
+            this.tbNum1.Size = new System.Drawing.Size(408, 20);
+            this.tbNum1.TabIndex = 19;
+            this.tbNum1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbNum1_KeyPress);
             // 
             // label3
             // 
@@ -117,82 +118,88 @@
             this.label1.Text = "Calculator";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox2
+            // tbNum2
             // 
-            this.textBox2.Location = new System.Drawing.Point(326, 272);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(408, 20);
-            this.textBox2.TabIndex = 26;
+            this.tbNum2.Location = new System.Drawing.Point(326, 272);
+            this.tbNum2.Name = "tbNum2";
+            this.tbNum2.Size = new System.Drawing.Size(408, 20);
+            this.tbNum2.TabIndex = 26;
+            this.tbNum2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbNum2_KeyPress);
             // 
-            // button2
+            // btPlus
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.Blue;
-            this.button2.Location = new System.Drawing.Point(154, 333);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(80, 80);
-            this.button2.TabIndex = 27;
-            this.button2.Text = "+";
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button2.UseVisualStyleBackColor = false;
+            this.btPlus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btPlus.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btPlus.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btPlus.ForeColor = System.Drawing.Color.Blue;
+            this.btPlus.Location = new System.Drawing.Point(154, 333);
+            this.btPlus.Name = "btPlus";
+            this.btPlus.Size = new System.Drawing.Size(80, 80);
+            this.btPlus.TabIndex = 27;
+            this.btPlus.Text = "+";
+            this.btPlus.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btPlus.UseVisualStyleBackColor = false;
+            this.btPlus.Click += new System.EventHandler(this.btPlus_Click);
             // 
-            // button3
+            // btMinus
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.Blue;
-            this.button3.Location = new System.Drawing.Point(301, 333);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(80, 80);
-            this.button3.TabIndex = 28;
-            this.button3.Text = "-";
-            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button3.UseVisualStyleBackColor = false;
+            this.btMinus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btMinus.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btMinus.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btMinus.ForeColor = System.Drawing.Color.Blue;
+            this.btMinus.Location = new System.Drawing.Point(301, 333);
+            this.btMinus.Name = "btMinus";
+            this.btMinus.Size = new System.Drawing.Size(80, 80);
+            this.btMinus.TabIndex = 28;
+            this.btMinus.Text = "-";
+            this.btMinus.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btMinus.UseVisualStyleBackColor = false;
+            this.btMinus.Click += new System.EventHandler(this.btMinus_Click);
             // 
-            // button4
+            // btMultiply
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.Blue;
-            this.button4.Location = new System.Drawing.Point(448, 333);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(80, 80);
-            this.button4.TabIndex = 29;
-            this.button4.Text = "*";
-            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button4.UseVisualStyleBackColor = false;
+            this.btMultiply.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btMultiply.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btMultiply.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btMultiply.ForeColor = System.Drawing.Color.Blue;
+            this.btMultiply.Location = new System.Drawing.Point(448, 333);
+            this.btMultiply.Name = "btMultiply";
+            this.btMultiply.Size = new System.Drawing.Size(80, 80);
+            this.btMultiply.TabIndex = 29;
+            this.btMultiply.Text = "*";
+            this.btMultiply.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btMultiply.UseVisualStyleBackColor = false;
+            this.btMultiply.Click += new System.EventHandler(this.btMultiply_Click);
             // 
-            // button5
+            // btDivide
             // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.Blue;
-            this.button5.Location = new System.Drawing.Point(595, 333);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(80, 80);
-            this.button5.TabIndex = 30;
-            this.button5.Text = "➗";
-            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button5.UseVisualStyleBackColor = false;
+            this.btDivide.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btDivide.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btDivide.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btDivide.ForeColor = System.Drawing.Color.Blue;
+            this.btDivide.Location = new System.Drawing.Point(595, 333);
+            this.btDivide.Name = "btDivide";
+            this.btDivide.Size = new System.Drawing.Size(80, 80);
+            this.btDivide.TabIndex = 30;
+            this.btDivide.Text = "➗";
+            this.btDivide.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btDivide.UseVisualStyleBackColor = false;
+            this.btDivide.Click += new System.EventHandler(this.btDivide_Click);
             // 
-            // button6
+            // btPow
             // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.Blue;
-            this.button6.Location = new System.Drawing.Point(742, 333);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(80, 80);
-            this.button6.TabIndex = 31;
-            this.button6.Text = "^";
-            this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button6.UseVisualStyleBackColor = false;
+            this.btPow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btPow.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btPow.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btPow.ForeColor = System.Drawing.Color.Blue;
+            this.btPow.Location = new System.Drawing.Point(742, 333);
+            this.btPow.Name = "btPow";
+            this.btPow.Size = new System.Drawing.Size(80, 80);
+            this.btPow.TabIndex = 31;
+            this.btPow.Text = "^";
+            this.btPow.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btPow.UseVisualStyleBackColor = false;
+            this.btPow.Click += new System.EventHandler(this.btPow_Click);
             // 
             // label5
             // 
@@ -229,17 +236,18 @@
             this.tslbDateTime.Size = new System.Drawing.Size(59, 22);
             this.tslbDateTime.Text = "datetime?";
             // 
-            // comboBox1
+            // cbbDecimal
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cbbDecimal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbDecimal.FormattingEnabled = true;
+            this.cbbDecimal.Items.AddRange(new object[] {
             "ทศนิยม 2 ตำแหน่ง",
             "ทศนิยม 4 ตำแหน่ง",
             "ทศนิยม 8 ตำแหน่ง"});
-            this.comboBox1.Location = new System.Drawing.Point(326, 452);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(408, 21);
-            this.comboBox1.TabIndex = 34;
+            this.cbbDecimal.Location = new System.Drawing.Point(326, 452);
+            this.cbbDecimal.Name = "cbbDecimal";
+            this.cbbDecimal.Size = new System.Drawing.Size(408, 21);
+            this.cbbDecimal.TabIndex = 34;
             // 
             // timer1
             // 
@@ -250,18 +258,18 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1064, 681);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbbDecimal);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.btPow);
+            this.Controls.Add(this.btDivide);
+            this.Controls.Add(this.btMultiply);
+            this.Controls.Add(this.btMinus);
+            this.Controls.Add(this.btPlus);
+            this.Controls.Add(this.tbNum2);
+            this.Controls.Add(this.lbResult);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbNum1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -280,23 +288,23 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lbResult;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbNum1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.TextBox tbNum2;
+        private System.Windows.Forms.Button btPlus;
+        private System.Windows.Forms.Button btMinus;
+        private System.Windows.Forms.Button btMultiply;
+        private System.Windows.Forms.Button btDivide;
+        private System.Windows.Forms.Button btPow;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripLabel tslbUsername;
         private System.Windows.Forms.ToolStripLabel tslbDateTime;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbbDecimal;
         private System.Windows.Forms.Timer timer1;
     }
 }

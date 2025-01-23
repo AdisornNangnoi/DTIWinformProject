@@ -36,32 +36,26 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label17 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.checkBox4 = new System.Windows.Forms.CheckBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.checkBox5 = new System.Windows.Forms.CheckBox();
@@ -72,6 +66,12 @@
             this.tslbUsername = new System.Windows.Forms.ToolStripLabel();
             this.tslbDateTime = new System.Windows.Forms.ToolStripLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -101,10 +101,10 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label23);
             this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.label17);
-            this.groupBox1.Controls.Add(this.textBox11);
             this.groupBox1.Controls.Add(this.label16);
             this.groupBox1.Location = new System.Drawing.Point(107, 516);
             this.groupBox1.Name = "groupBox1";
@@ -149,18 +149,6 @@
             this.label17.TabIndex = 57;
             this.label17.Text = "บาท";
             this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // textBox11
-            // 
-            this.textBox11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.textBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox11.ForeColor = System.Drawing.Color.Red;
-            this.textBox11.Location = new System.Drawing.Point(233, 35);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(181, 38);
-            this.textBox11.TabIndex = 56;
-            this.textBox11.Text = "0.00";
-            this.textBox11.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label16
             // 
@@ -221,18 +209,6 @@
             this.label5.Text = "ด้าม";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox2
-            // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.Red;
-            this.textBox2.Location = new System.Drawing.Point(588, 252);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(165, 24);
-            this.textBox2.TabIndex = 32;
-            this.textBox2.Text = "0.00";
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
             // label6
             // 
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -252,18 +228,6 @@
             this.label7.TabIndex = 38;
             this.label7.Text = "บาท";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // textBox3
-            // 
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ForeColor = System.Drawing.Color.Red;
-            this.textBox3.Location = new System.Drawing.Point(588, 294);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(165, 24);
-            this.textBox3.TabIndex = 37;
-            this.textBox3.Text = "0.00";
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label8
             // 
@@ -304,18 +268,6 @@
             this.label9.Text = "บาท";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox5
-            // 
-            this.textBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.ForeColor = System.Drawing.Color.Red;
-            this.textBox5.Location = new System.Drawing.Point(588, 337);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(165, 24);
-            this.textBox5.TabIndex = 42;
-            this.textBox5.Text = "0.00";
-            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
             // label10
             // 
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -355,18 +307,6 @@
             this.label11.Text = "บาท";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox7
-            // 
-            this.textBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.ForeColor = System.Drawing.Color.Red;
-            this.textBox7.Location = new System.Drawing.Point(588, 378);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(165, 24);
-            this.textBox7.TabIndex = 47;
-            this.textBox7.Text = "0.00";
-            this.textBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
             // label12
             // 
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -405,18 +345,6 @@
             this.label13.TabIndex = 53;
             this.label13.Text = "บาท";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // textBox9
-            // 
-            this.textBox9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.ForeColor = System.Drawing.Color.Red;
-            this.textBox9.Location = new System.Drawing.Point(588, 419);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(165, 24);
-            this.textBox9.TabIndex = 52;
-            this.textBox9.Text = "0.00";
-            this.textBox9.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label14
             // 
@@ -513,36 +441,108 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // label18
+            // 
+            this.label18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.Red;
+            this.label18.Location = new System.Drawing.Point(588, 254);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(165, 22);
+            this.label18.TabIndex = 57;
+            this.label18.Text = "0.00";
+            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label19
+            // 
+            this.label19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.Color.Red;
+            this.label19.Location = new System.Drawing.Point(588, 296);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(165, 22);
+            this.label19.TabIndex = 58;
+            this.label19.Text = "0.00";
+            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label20
+            // 
+            this.label20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.Color.Red;
+            this.label20.Location = new System.Drawing.Point(588, 339);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(165, 22);
+            this.label20.TabIndex = 59;
+            this.label20.Text = "0.00";
+            this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label21
+            // 
+            this.label21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.ForeColor = System.Drawing.Color.Red;
+            this.label21.Location = new System.Drawing.Point(588, 380);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(165, 22);
+            this.label21.TabIndex = 60;
+            this.label21.Text = "0.00";
+            this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label22
+            // 
+            this.label22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.ForeColor = System.Drawing.Color.Red;
+            this.label22.Location = new System.Drawing.Point(588, 421);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(165, 22);
+            this.label22.TabIndex = 61;
+            this.label22.Text = "0.00";
+            this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label23
+            // 
+            this.label23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.ForeColor = System.Drawing.Color.Red;
+            this.label23.Location = new System.Drawing.Point(221, 39);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(190, 38);
+            this.label23.TabIndex = 62;
+            this.label23.Text = "0.00";
+            this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // FrmSAUShop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1064, 681);
+            this.Controls.Add(this.label22);
+            this.Controls.Add(this.label21);
+            this.Controls.Add(this.label20);
+            this.Controls.Add(this.label19);
+            this.Controls.Add(this.label18);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.textBox9);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.textBox10);
             this.Controls.Add(this.checkBox5);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.textBox7);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.textBox8);
             this.Controls.Add(this.checkBox4);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox5);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.checkBox3);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.checkBox2);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label4);
@@ -560,7 +560,6 @@
             this.Text = "Shop - SAU Soft V.1.0";
             this.Load += new System.EventHandler(this.FrmSAUShop_Load);
             this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -579,32 +578,26 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.CheckBox checkBox3;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.CheckBox checkBox4;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.CheckBox checkBox5;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox textBox11;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
@@ -612,5 +605,11 @@
         private System.Windows.Forms.ToolStripLabel tslbUsername;
         private System.Windows.Forms.ToolStripLabel tslbDateTime;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label22;
     }
 }
