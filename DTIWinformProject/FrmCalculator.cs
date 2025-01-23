@@ -116,7 +116,7 @@ namespace DTIWinformProject
                         shareData.showWarningMsg("ไม่สามารถหารด้วย 0 ได้");
                         return;
                     }
-                    else { result = num2 / num1; }
+                    else { result = num1 / num2; }
 
                 }
                 else
