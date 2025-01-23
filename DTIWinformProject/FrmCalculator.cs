@@ -111,6 +111,11 @@ namespace DTIWinformProject
                 }
                 else if (opt == "/")
                 {
+                    if (num2 == 0)
+                    {
+                        shareData.showWarningMsg("ไม่สามารถหารด้วย 0 ได้");
+                        return;
+                    }
                     result = num1 / num2;
 
                 }
@@ -121,15 +126,15 @@ namespace DTIWinformProject
                 }
                 if (cbbDecimal.SelectedIndex == 0)
                 {
-                    lbResult.Text = result.ToString("0.00");
+                    lbResult.Text = result.ToString("N2");
                 }
                 else if (cbbDecimal.SelectedIndex == 1)
                 {
-                    lbResult.Text = result.ToString("0.0000");
+                    lbResult.Text = result.ToString("N4");
                 }
                 else
                 {
-                    lbResult.Text = result.ToString("0.00000000");
+                    lbResult.Text = result.ToString("N8");
                 }
             }
         }
