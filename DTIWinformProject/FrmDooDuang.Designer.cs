@@ -30,13 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDooDuang));
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.nudWeight = new System.Windows.Forms.NumericUpDown();
+            this.mtbID = new System.Windows.Forms.MaskedTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.tbName = new System.Windows.Forms.TextBox();
+            this.dtpDate = new System.Windows.Forms.DateTimePicker();
+            this.nudHeight = new System.Windows.Forms.NumericUpDown();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -47,14 +47,16 @@
             this.tslbUsername = new System.Windows.Forms.ToolStripLabel();
             this.tslbDateTime = new System.Windows.Forms.ToolStripLabel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.lbBMI = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
+            this.lbResult = new System.Windows.Forms.Label();
+            this.lbHeight = new System.Windows.Forms.Label();
+            this.lbWeight = new System.Windows.Forms.Label();
+            this.lbAge = new System.Windows.Forms.Label();
+            this.lbDate = new System.Windows.Forms.Label();
+            this.lbName = new System.Windows.Forms.Label();
+            this.lbID = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -63,17 +65,21 @@
             this.label11 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btImage = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btExit = new System.Windows.Forms.Button();
+            this.btDooduang = new System.Windows.Forms.Button();
+            this.btNew = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.nudWeight)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudHeight)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -81,21 +87,27 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // numericUpDown1
+            // nudWeight
             // 
-            this.numericUpDown1.DecimalPlaces = 2;
-            this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.Location = new System.Drawing.Point(122, 152);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 24);
-            this.numericUpDown1.TabIndex = 0;
+            this.nudWeight.DecimalPlaces = 2;
+            this.nudWeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudWeight.Location = new System.Drawing.Point(122, 152);
+            this.nudWeight.Maximum = new decimal(new int[] {
+            200,
+            0,
+            0,
+            0});
+            this.nudWeight.Name = "nudWeight";
+            this.nudWeight.Size = new System.Drawing.Size(120, 24);
+            this.nudWeight.TabIndex = 0;
             // 
-            // maskedTextBox1
+            // mtbID
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(122, 37);
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(305, 26);
-            this.maskedTextBox1.TabIndex = 1;
+            this.mtbID.Location = new System.Drawing.Point(122, 37);
+            this.mtbID.Mask = "0-0000-00000-00-0";
+            this.mtbID.Name = "mtbID";
+            this.mtbID.Size = new System.Drawing.Size(305, 26);
+            this.mtbID.TabIndex = 1;
             // 
             // label1
             // 
@@ -111,16 +123,18 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
-            this.groupBox1.Controls.Add(this.numericUpDown2);
+            this.groupBox1.Controls.Add(this.label14);
+            this.groupBox1.Controls.Add(this.label13);
+            this.groupBox1.Controls.Add(this.tbName);
+            this.groupBox1.Controls.Add(this.dtpDate);
+            this.groupBox1.Controls.Add(this.nudHeight);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.numericUpDown1);
-            this.groupBox1.Controls.Add(this.maskedTextBox1);
+            this.groupBox1.Controls.Add(this.nudWeight);
+            this.groupBox1.Controls.Add(this.mtbID);
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(76, 176);
@@ -130,30 +144,41 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "ข้อมูลส่วนตัว";
             // 
-            // textBox1
+            // tbName
             // 
-            this.textBox1.Location = new System.Drawing.Point(122, 74);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(305, 26);
-            this.textBox1.TabIndex = 37;
+            this.tbName.Location = new System.Drawing.Point(122, 74);
+            this.tbName.Name = "tbName";
+            this.tbName.Size = new System.Drawing.Size(305, 26);
+            this.tbName.TabIndex = 37;
+            this.tbName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbName_KeyPress);
             // 
-            // dateTimePicker1
+            // dtpDate
             // 
-            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(122, 113);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(305, 24);
-            this.dateTimePicker1.TabIndex = 36;
+            this.dtpDate.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpDate.Location = new System.Drawing.Point(122, 113);
+            this.dtpDate.Name = "dtpDate";
+            this.dtpDate.Size = new System.Drawing.Size(305, 24);
+            this.dtpDate.TabIndex = 36;
             // 
-            // numericUpDown2
+            // nudHeight
             // 
-            this.numericUpDown2.DecimalPlaces = 2;
-            this.numericUpDown2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown2.Location = new System.Drawing.Point(122, 189);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(120, 24);
-            this.numericUpDown2.TabIndex = 35;
+            this.nudHeight.DecimalPlaces = 2;
+            this.nudHeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudHeight.Location = new System.Drawing.Point(122, 189);
+            this.nudHeight.Maximum = new decimal(new int[] {
+            300,
+            0,
+            0,
+            0});
+            this.nudHeight.Name = "nudHeight";
+            this.nudHeight.Size = new System.Drawing.Size(120, 24);
+            this.nudHeight.TabIndex = 35;
+            this.nudHeight.Value = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
             // 
             // label6
             // 
@@ -242,13 +267,17 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.panel1);
-            this.groupBox3.Controls.Add(this.label18);
-            this.groupBox3.Controls.Add(this.label17);
-            this.groupBox3.Controls.Add(this.label16);
             this.groupBox3.Controls.Add(this.label15);
-            this.groupBox3.Controls.Add(this.label14);
-            this.groupBox3.Controls.Add(this.label13);
+            this.groupBox3.Controls.Add(this.lbBMI);
+            this.groupBox3.Controls.Add(this.label16);
+            this.groupBox3.Controls.Add(this.label21);
+            this.groupBox3.Controls.Add(this.panel1);
+            this.groupBox3.Controls.Add(this.lbHeight);
+            this.groupBox3.Controls.Add(this.lbWeight);
+            this.groupBox3.Controls.Add(this.lbAge);
+            this.groupBox3.Controls.Add(this.lbDate);
+            this.groupBox3.Controls.Add(this.lbName);
+            this.groupBox3.Controls.Add(this.lbID);
             this.groupBox3.Controls.Add(this.label12);
             this.groupBox3.Controls.Add(this.label7);
             this.groupBox3.Controls.Add(this.label8);
@@ -264,97 +293,119 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "ผลดวงของคุณ";
             // 
+            // lbBMI
+            // 
+            this.lbBMI.BackColor = System.Drawing.SystemColors.Control;
+            this.lbBMI.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbBMI.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.lbBMI.Location = new System.Drawing.Point(149, 264);
+            this.lbBMI.Name = "lbBMI";
+            this.lbBMI.Size = new System.Drawing.Size(253, 23);
+            this.lbBMI.TabIndex = 49;
+            this.lbBMI.Text = "XXXXXXXXXX";
+            this.lbBMI.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label21
+            // 
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(6, 264);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(106, 23);
+            this.label21.TabIndex = 48;
+            this.label21.Text = "BMI";
+            this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.label19);
-            this.panel1.Location = new System.Drawing.Point(25, 290);
+            this.panel1.Controls.Add(this.lbResult);
+            this.panel1.Location = new System.Drawing.Point(25, 304);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(389, 115);
             this.panel1.TabIndex = 47;
             // 
-            // label19
+            // lbResult
             // 
-            this.label19.BackColor = System.Drawing.SystemColors.Control;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label19.Location = new System.Drawing.Point(12, 10);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(365, 93);
-            this.label19.TabIndex = 48;
-            this.label19.Text = "ผลดวง";
-            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbResult.BackColor = System.Drawing.SystemColors.Control;
+            this.lbResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbResult.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.lbResult.Location = new System.Drawing.Point(12, 11);
+            this.lbResult.Name = "lbResult";
+            this.lbResult.Size = new System.Drawing.Size(365, 93);
+            this.lbResult.TabIndex = 48;
+            this.lbResult.Text = "ผลดวง";
+            this.lbResult.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label18
+            // lbHeight
             // 
-            this.label18.BackColor = System.Drawing.SystemColors.Control;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.label18.Location = new System.Drawing.Point(149, 227);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(253, 23);
-            this.label18.TabIndex = 46;
-            this.label18.Text = "XXXXXXXXXX";
-            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbHeight.BackColor = System.Drawing.SystemColors.Control;
+            this.lbHeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbHeight.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.lbHeight.Location = new System.Drawing.Point(149, 227);
+            this.lbHeight.Name = "lbHeight";
+            this.lbHeight.Size = new System.Drawing.Size(253, 23);
+            this.lbHeight.TabIndex = 46;
+            this.lbHeight.Text = "XXXXXXXXXX";
+            this.lbHeight.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label17
+            // lbWeight
             // 
-            this.label17.BackColor = System.Drawing.SystemColors.Control;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.label17.Location = new System.Drawing.Point(149, 190);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(253, 23);
-            this.label17.TabIndex = 45;
-            this.label17.Text = "XXXXXXXXXX";
-            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbWeight.BackColor = System.Drawing.SystemColors.Control;
+            this.lbWeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbWeight.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.lbWeight.Location = new System.Drawing.Point(149, 190);
+            this.lbWeight.Name = "lbWeight";
+            this.lbWeight.Size = new System.Drawing.Size(253, 23);
+            this.lbWeight.TabIndex = 45;
+            this.lbWeight.Text = "XXXXXXXXXX";
+            this.lbWeight.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label16
+            // lbAge
             // 
-            this.label16.BackColor = System.Drawing.SystemColors.Control;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.label16.Location = new System.Drawing.Point(149, 153);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(253, 23);
-            this.label16.TabIndex = 44;
-            this.label16.Text = "XXXXXXXXXX";
-            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbAge.BackColor = System.Drawing.SystemColors.Control;
+            this.lbAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAge.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.lbAge.Location = new System.Drawing.Point(149, 153);
+            this.lbAge.Name = "lbAge";
+            this.lbAge.Size = new System.Drawing.Size(253, 23);
+            this.lbAge.TabIndex = 44;
+            this.lbAge.Text = "XXXXXXXXXX";
+            this.lbAge.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label15
+            // lbDate
             // 
-            this.label15.BackColor = System.Drawing.SystemColors.Control;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.label15.Location = new System.Drawing.Point(149, 117);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(253, 23);
-            this.label15.TabIndex = 43;
-            this.label15.Text = "XXXXXXXXXX";
-            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbDate.BackColor = System.Drawing.SystemColors.Control;
+            this.lbDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.lbDate.Location = new System.Drawing.Point(149, 117);
+            this.lbDate.Name = "lbDate";
+            this.lbDate.Size = new System.Drawing.Size(253, 23);
+            this.lbDate.TabIndex = 43;
+            this.lbDate.Text = "XXXXXXXXXX";
+            this.lbDate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label14
+            // lbName
             // 
-            this.label14.BackColor = System.Drawing.SystemColors.Control;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.label14.Location = new System.Drawing.Point(149, 77);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(253, 23);
-            this.label14.TabIndex = 42;
-            this.label14.Text = "XXXXXXXXXX";
-            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbName.BackColor = System.Drawing.SystemColors.Control;
+            this.lbName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.lbName.Location = new System.Drawing.Point(149, 77);
+            this.lbName.Name = "lbName";
+            this.lbName.Size = new System.Drawing.Size(253, 23);
+            this.lbName.TabIndex = 42;
+            this.lbName.Text = "XXXXXXXXXX";
+            this.lbName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label13
+            // lbID
             // 
-            this.label13.BackColor = System.Drawing.SystemColors.Control;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.label13.Location = new System.Drawing.Point(149, 40);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(253, 23);
-            this.label13.TabIndex = 41;
-            this.label13.Text = "XXXXXXXXXX";
-            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbID.BackColor = System.Drawing.SystemColors.Control;
+            this.lbID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.lbID.Location = new System.Drawing.Point(149, 40);
+            this.lbID.Name = "lbID";
+            this.lbID.Size = new System.Drawing.Size(253, 23);
+            this.lbID.TabIndex = 41;
+            this.lbID.Text = "XXXXXXXXXX";
+            this.lbID.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label12
             // 
@@ -428,7 +479,7 @@
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.button5);
+            this.groupBox5.Controls.Add(this.btImage);
             this.groupBox5.Controls.Add(this.pictureBox1);
             this.groupBox5.Controls.Add(this.groupBox6);
             this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -438,17 +489,17 @@
             this.groupBox5.TabIndex = 34;
             this.groupBox5.TabStop = false;
             // 
-            // button5
+            // btImage
             // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(145, 133);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(35, 35);
-            this.button5.TabIndex = 35;
-            this.button5.Text = "...";
-            this.button5.UseVisualStyleBackColor = false;
+            this.btImage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btImage.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btImage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btImage.Location = new System.Drawing.Point(145, 133);
+            this.btImage.Name = "btImage";
+            this.btImage.Size = new System.Drawing.Size(35, 35);
+            this.btImage.TabIndex = 35;
+            this.btImage.Text = "...";
+            this.btImage.UseVisualStyleBackColor = false;
             // 
             // pictureBox1
             // 
@@ -471,44 +522,47 @@
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "รางวัลที่ 1";
             // 
-            // button4
+            // btExit
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button4.Image = global::DTIWinformProject.Properties.Resources.exit1;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(76, 565);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(227, 50);
-            this.button4.TabIndex = 33;
-            this.button4.Text = "จบโปรแกรม";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btExit.Image = global::DTIWinformProject.Properties.Resources.exit1;
+            this.btExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btExit.Location = new System.Drawing.Point(76, 565);
+            this.btExit.Name = "btExit";
+            this.btExit.Size = new System.Drawing.Size(227, 50);
+            this.btExit.TabIndex = 33;
+            this.btExit.Text = "จบโปรแกรม";
+            this.btExit.UseVisualStyleBackColor = false;
+            this.btExit.Click += new System.EventHandler(this.btExit_Click);
             // 
-            // button3
+            // btDooduang
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.Image = global::DTIWinformProject.Properties.Resources.find1;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(76, 491);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(227, 50);
-            this.button3.TabIndex = 32;
-            this.button3.Text = "ดูดวง";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btDooduang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btDooduang.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btDooduang.Image = global::DTIWinformProject.Properties.Resources.find1;
+            this.btDooduang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btDooduang.Location = new System.Drawing.Point(76, 491);
+            this.btDooduang.Name = "btDooduang";
+            this.btDooduang.Size = new System.Drawing.Size(227, 50);
+            this.btDooduang.TabIndex = 32;
+            this.btDooduang.Text = "ดูดวง";
+            this.btDooduang.UseVisualStyleBackColor = false;
+            this.btDooduang.Click += new System.EventHandler(this.btDooduang_Click);
             // 
-            // button2
+            // btNew
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Image = global::DTIWinformProject.Properties.Resources.new1;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(76, 427);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(227, 50);
-            this.button2.TabIndex = 31;
-            this.button2.Text = "ใหม่";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btNew.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btNew.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btNew.Image = global::DTIWinformProject.Properties.Resources.new1;
+            this.btNew.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btNew.Location = new System.Drawing.Point(76, 427);
+            this.btNew.Name = "btNew";
+            this.btNew.Size = new System.Drawing.Size(227, 50);
+            this.btNew.TabIndex = 31;
+            this.btNew.Text = "ใหม่";
+            this.btNew.UseVisualStyleBackColor = false;
+            this.btNew.Click += new System.EventHandler(this.btNew_Click);
             // 
             // button1
             // 
@@ -529,15 +583,55 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // label13
+            // 
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(262, 152);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(106, 23);
+            this.label13.TabIndex = 38;
+            this.label13.Text = "กิโลกรัม";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label14
+            // 
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(262, 190);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(106, 23);
+            this.label14.TabIndex = 39;
+            this.label14.Text = "เซนติเมตร";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label15
+            // 
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(270, 225);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(106, 23);
+            this.label15.TabIndex = 41;
+            this.label15.Text = "เซนติเมตร";
+            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label16
+            // 
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(270, 190);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(106, 23);
+            this.label16.TabIndex = 40;
+            this.label16.Text = "กิโลกรัม";
+            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // FrmDooDuang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1064, 681);
             this.Controls.Add(this.groupBox5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btExit);
+            this.Controls.Add(this.btDooduang);
+            this.Controls.Add(this.btNew);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.groupBox1);
@@ -550,10 +644,10 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ดูดวงแม่นๆ - DTI Soft V.1.0";
             this.Load += new System.EventHandler(this.FrmDooDuang_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudWeight)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudHeight)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -567,8 +661,8 @@
 
         #endregion
 
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.NumericUpDown nudWeight;
+        private System.Windows.Forms.MaskedTextBox mtbID;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -583,30 +677,36 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.NumericUpDown nudHeight;
+        private System.Windows.Forms.DateTimePicker dtpDate;
+        private System.Windows.Forms.TextBox tbName;
+        private System.Windows.Forms.Button btNew;
+        private System.Windows.Forms.Button btDooduang;
+        private System.Windows.Forms.Button btExit;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btImage;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label lbID;
+        private System.Windows.Forms.Label lbHeight;
+        private System.Windows.Forms.Label lbWeight;
+        private System.Windows.Forms.Label lbAge;
+        private System.Windows.Forms.Label lbDate;
+        private System.Windows.Forms.Label lbName;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label lbResult;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label lbBMI;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
     }
 }
