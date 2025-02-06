@@ -32,5 +32,11 @@ namespace DTIWinformProject
         {
 
         }
+
+        private void btOk_Click(object sender, EventArgs e)
+        {
+            new FrmSAURegister().Show();
+            Hide();
+        }
     }
 }

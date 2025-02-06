@@ -203,6 +203,7 @@
             this.btOk.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btOk.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btOk.UseVisualStyleBackColor = false;
+            this.btOk.Click += new System.EventHandler(this.btOk_Click);
             // 
             // pbImageRegisShow
             // 

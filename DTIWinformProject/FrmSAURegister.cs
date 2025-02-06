@@ -160,7 +160,7 @@ namespace DTIWinformProject
                     selectedSubjects.ToString()
                 );
                 frmSAURegisterResult.Show();
-
+                Hide();
 
             }
 
